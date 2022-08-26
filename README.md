@@ -1,4 +1,4 @@
-# SmartScanner Capacitor
+# SmartScanner React Native
 
 React Native module for the [SmartScanner Core](https://github.com/idpass/smartscanner-core) library to scan MRZ, NFC and barcodes.
 
