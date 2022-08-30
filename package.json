@@ -1,6 +1,6 @@
 {
   "name": "smartscanner-react-native",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "test",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -36,14 +36,14 @@
     "android"
   ],
   "repository": "https://github.com/newlogic/smartscanner-react-native",
-  "author": "NewLogic <jay-anne@newlogic.com> (https://github.com/newlogic)",
+  "author": "NewLogic (https://github.com/newlogic)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/newlogic/smartscanner-react-native/issues"
   },
   "homepage": "https://github.com/newlogic/smartscanner-react-native#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "http://localhost:4873"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",

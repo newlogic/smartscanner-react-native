@@ -6,7 +6,9 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo managed workflow\n';
 
-const SmartscannerReactNative = NativeModules.SmartscannerReactNative  ? NativeModules.SmartscannerReactNative  : new Proxy(
+const SmartScanner = NativeModules.SmartscannerReactNativeModule
+  ? NativeModules.SmartscannerReactNativeModule
+  : new Proxy(
       {},
       {
         get() {
@@ -14,7 +16,35 @@ const SmartscannerReactNative = NativeModules.SmartscannerReactNative  ? NativeM
         },
       }
     );
+export type SmartScannerOptions = {
+  action: string;
+  options: {
+    mode: string;
+    mrzFormat?: string;
+    scannerSize?: string;
+    barcodeOptions?: {
+      barcodeFormats: Array<String>;
+    };
+    config: {
+      background?: string;
+      branding?: boolean;
+      isManualCapture?: boolean;
+      label?: string;
+      header?: string;
+      imageResultType?: string | null;
+      subHeader?: string;
+      font?: string | null;
+      orientation?: string | null;
+    };
+  };
+};
 
-export function multiply(a: number, b: number): Promise<number> {
-  return SmartscannerReactNative.multiply(a, b);
+export function executeScanner(options: SmartScannerOptions): Promise<number> {
+  return SmartScanner.executeScanner(options);
 }
+export type SmartScannerErrorCodes =
+  | 'SCANNER_CANCELLED'
+  | 'SCANNER_UNKNOWN_CODE'
+  | 'SCANNER_FAILED'
+  | 'SCANNER_RESULTS_NOT_FOUND'
+  | 'SCANNER_ACTIVITY_DOES_NOT_EXIST';
