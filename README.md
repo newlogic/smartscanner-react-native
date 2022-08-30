@@ -4,6 +4,12 @@ React Native module for the [SmartScanner Core](https://github.com/idpass/smarts
 
 ## Installation
 
+# SmartScanner React Native
+
+React Native module for the [SmartScanner Core](https://github.com/idpass/smartscanner-core) library to scan MRZ, NFC and barcodes.
+
+## Installation
+
 ## Usage
 
 
@@ -17,3 +23,5 @@ React Native module for the [SmartScanner Core](https://github.com/idpass/smarts
 ## License
 
 [Apache-2.0 License](LICENSE)
+
+Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
