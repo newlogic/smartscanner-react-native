@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/newlogic/smartscanner-react-native#readme",
   "publishConfig": {
-    "registry": "http://localhost:4873"
+    "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",
